@@ -33,7 +33,11 @@ namespace GuessTheNumber
                     break;
             }
         }
-        
+
+        public void PrintLastMsg()
+        {
+            Console.WriteLine("Thank you for playing Guess the Number!");
+        }
         
     }
 }

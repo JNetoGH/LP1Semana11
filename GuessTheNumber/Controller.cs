@@ -16,6 +16,7 @@
             _view.PrintIntroduction();
             _model.GenerateNewTargetNumber();
             RunGameLoop();
+            _view.PrintLastMsg();
         }
         
         private void RunGameLoop()
@@ -23,6 +24,7 @@
             while (_model.AttemptState != State.Right)
             {
                 _model.Guess = _view.ManageGuessMsg();
+                _model.Attempts++;
                 _view.PrintAttemptStateMsg(_model);
             }
         }
